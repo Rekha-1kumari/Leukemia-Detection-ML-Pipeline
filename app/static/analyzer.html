@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Laboratory — HemaVision™ Cytopathology</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Professional Clinical Navbar -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">
+            <div class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                </svg>
+            </div>
+            <div>
+                <span class="brand-title">HemaVision™ <span class="badge-clinical">CLINICAL CORE</span></span>
+                <span class="brand-subtitle">Precision Hematology & Cytopathology Intelligence</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-link">About Leukemia</a>
+            <a href="/analyzer" class="nav-link active">Diagnostic Lab</a>
+            <a href="/cancer-guide" class="nav-link">Cancer Video Blog</a>
+            <a href="/treatment" class="nav-link">Treatment Protocols</a>
+            <a href="/copilot" class="nav-link">Clinical Copilot</a>
+        </nav>
+
+        <div class="nav-cta">
+            <a href="/copilot" class="btn btn-outline btn-sm">
+                💬 Open Copilot
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Processing Stages Bar -->
+        <div class="pipeline-steps-bar">
+            <div class="p-step active" id="pStep1">
+                <span class="p-circle">1</span>
+                <div class="p-text">
+                    <strong>Smear Ingestion</strong>
+                    <small>100x Oil Immersion</small>
+                </div>
+            </div>
+            <div class="p-line"></div>
+            <div class="p-step" id="pStep2">
+                <span class="p-circle">2</span>
+                <div class="p-text">
+                    <strong>Stain Normalization</strong>
+                    <small>Reinhard/Illumination</small>
+                </div>
+            </div>
+            <div class="p-line"></div>
+            <div class="p-step" id="pStep3">
+                <span class="p-circle">3</span>
+                <div class="p-text">
+                    <strong>Adaptive Segmentation</strong>
+                    <small>OpenCV N:C Cytometry</small>
+                </div>
+            </div>
+            <div class="p-line"></div>
+            <div class="p-step" id="pStep4">
+                <span class="p-circle">4</span>
+                <div class="p-text">
+                    <strong>Neural Inference</strong>
+                    <small>Dual-Evidence Engine</small>
+                </div>
+            </div>
+            <div class="p-line"></div>
+            <div class="p-step" id="pStep5">
+                <span class="p-circle">5</span>
+                <div class="p-text">
+                    <strong>Grad-CAM XAI</strong>
+                    <small>Nuclear Saliency Map</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-Packaged Clinical Demo Cases -->
+        <div class="samples-bar">
+            <div class="samples-bar-header">
+                <strong>Standard Clinical Demo Cases</strong> — Click any specimen to run full dual-evidence analysis:
+            </div>
+            <div class="samples-slider" id="samplesContainer">
+                <div class="loading-shimmer" style="height: 38px; width: 100%;"></div>
+            </div>
+        </div>
+
+        <!-- 2-Column Clinical Workbench -->
+        <div class="lab-workspace-grid">
+            
+            <!-- Left Column: Input & Microscopy View -->
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div class="header-left">
+                        <span class="section-badge">MICROSCOPY</span>
+                        <h3>Peripheral Smear View</h3>
+                    </div>
+                    <div class="view-controls" id="viewControls" style="display: none;">
+                        <button class="view-btn active" data-view="split">Side-by-Side</button>
+                        <button class="view-btn" data-view="original">Original</button>
+                        <button class="view-btn" data-view="gradcam">Grad-CAM</button>
+                        <button class="view-btn" data-view="seg">Mask</button>
+                    </div>
+                </div>
+
+                <!-- Dropzone Area -->
+                <div class="dropzone-box" id="dropzoneBox">
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    
+                    <div id="dropzoneContent">
+                        <div class="drop-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h4>Upload Microscopic Smear</h4>
+                        <p>Drag and drop peripheral blood smear image (Wright-Giemsa 100x)</p>
+                        <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+                            <button class="btn btn-outline btn-sm" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                            <button class="btn btn-outline btn-sm" id="btnDemoNormal" style="color: var(--accent-teal); border-color: #99f6e4;">🔬 Normal Case</button>
+                            <button class="btn btn-outline btn-sm" id="btnDemoAll" style="color: #dc2626; border-color: #fecaca;">🚨 ALL Blast Case</button>
+                        </div>
+                    </div>
+
+                    <!-- Image Display Viewport -->
+                    <div id="imageViewerBox" style="display: none; width: 100%;">
+                        <div class="viewer-split-grid" id="splitGrid">
+                            <div class="split-card">
+                                <div class="split-label">Original Smear</div>
+                                <img id="imgOriginal" alt="Original Smear">
+                            </div>
+                            <div class="split-card">
+                                <div class="split-label">Grad-CAM Saliency</div>
+                                <img id="imgGradcam" alt="Grad-CAM Heatmap">
+                            </div>
+                            <div class="split-card">
+                                <div class="split-label">Morphology Mask</div>
+                                <img id="imgSeg" alt="Segmentation Mask">
+                            </div>
+                        </div>
+                        <div id="singleGrid" style="display: none; text-align: center;">
+                            <img id="singleImg" class="single-view-img" alt="Selected View">
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="inference-loading" id="inferenceLoading" style="display: none;">
+                        <div class="loader-spinner"></div>
+                        <p class="loader-text">Analyzing Microscopic Cytometry...</p>
+                        <span class="loader-sub">Extracting Nuclear Contours & Calculating N:C Ratio</span>
+                    </div>
+                </div>
+
+                <div class="card-footer-actions mt-16">
+                    <button class="btn btn-secondary btn-sm" id="btnClear" style="display: none;">Clear View</button>
+                    <button class="btn btn-outline btn-sm" id="btnConsultCopilot" style="display: none;">
+                        💬 Consult Copilot on this Report
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="btnOpenPdfModal" style="display: none;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        Export Certified PDF Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Decision Support & Cytometry -->
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div class="header-left">
+                        <span class="section-badge">DECISION SUPPORT</span>
+                        <h3>Cytological Findings</h3>
+                    </div>
+                    <span class="badge-clinical" id="statusBadge">Awaiting Specimen</span>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-diagnostics" id="emptyState">
+                    <div class="empty-icon">🔬</div>
+                    <h4>No Microscopic Specimen Analyzed</h4>
+                    <p>Select one of the reference cases above or drag-and-drop a blood smear image to initiate automated cytological assessment.</p>
+                </div>
+
+                <!-- Active Report Results -->
+                <div id="resultsContent" style="display: none;">
+                    
+                    <!-- Diagnostic Banner -->
+                    <div class="diag-banner" id="diagBanner">
+                        <div class="diag-icon" id="diagIcon">⚠️</div>
+                        <div class="diag-info">
+                            <span class="diag-sub">Pathology Classification</span>
+                            <h3 class="diag-title" id="diagTitle">Acute Lymphoblastic Leukemia (ALL)</h3>
+                            <p class="diag-desc" id="diagDesc">Enlarged hyperchromatic blast cells with elevated nuclear-to-cytoplasmic volume.</p>
+                        </div>
+                        <div class="diag-confidence">
+                            <span class="conf-value" id="confValue">94.2%</span>
+                            <span class="conf-caption">Confidence</span>
+                        </div>
+                    </div>
+
+                    <!-- Softmax Probabilities -->
+                    <div class="metric-section">
+                        <h4 class="metric-section-title">Calibrated Probability Distribution</h4>
+                        <div class="prob-row">
+                            <div class="prob-meta">
+                                <span>Acute Lymphoblastic Leukemia (ALL)</span>
+                                <span id="probAllTxt" class="prob-num">0%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill fill-all" id="probAllBar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <div class="prob-row">
+                            <div class="prob-meta">
+                                <span>Normal Mature Lymphocyte</span>
+                                <span id="probNormTxt" class="prob-num">0%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill fill-normal" id="probNormBar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quantitative Cytometry Grid -->
+                    <div class="metric-section">
+                        <h4 class="metric-section-title">Computational Morphometric Biomarkers</h4>
+                        <div class="morph-tiles-grid">
+                            <div class="morph-tile-box">
+                                <span class="morph-label">N:C Area Ratio</span>
+                                <div class="morph-val highlight" id="valNcRatio">--</div>
+                                <span class="morph-desc" id="lblNcStatus">Reference: 0.40 - 0.60</span>
+                            </div>
+                            <div class="morph-tile-box">
+                                <span class="morph-label">Nuclear Circularity</span>
+                                <div class="morph-val" id="valCircularity">--</div>
+                                <span class="morph-desc">Circularity Index (0 to 1.0)</span>
+                            </div>
+                            <div class="morph-tile-box">
+                                <span class="morph-label">Nucleus Footprint</span>
+                                <div class="morph-val" id="valNucleusArea">--</div>
+                                <span class="morph-desc">Segmented Chromatin Area</span>
+                            </div>
+                            <div class="morph-tile-box">
+                                <span class="morph-label">Cytoplasm Rim</span>
+                                <div class="morph-val" id="valCytoArea">--</div>
+                                <span class="morph-desc">Peripheral Cytoplasm Area</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Action Callout -->
+                    <div class="action-callout" id="actionCallout">
+                        <strong>Recommended Next Steps:</strong>
+                        <p id="actionText">Immediate flow cytometry (CD10, CD19 immunophenotyping) and bone marrow examination recommended.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Global Medical Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>HemaVision™ Clinical Oncology Intelligence</strong>
+                <p style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">
+                    Dedicated to automated cytopathology research and decision support.
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="/" class="footer-link">Home</a>
+                <a href="/analyzer" class="footer-link">Diagnostic Lab</a>
+                <a href="/treatment" class="footer-link">Treatment Protocols</a>
+                <a href="/copilot" class="footer-link">Gemini Copilot</a>
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            <b>CLINICAL DISCLAIMER:</b> HemaVision™ is an investigational software platform designed for clinical research, laboratory pre-screening, and educational decision support. It does not replace independent clinical evaluation by a board-certified hematopathologist or oncologist.
+        </div>
+    </footer>
+
+    <!-- Clinical PDF Modal -->
+    <div class="modal-backdrop" id="pdfModal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Export Certified Clinical Report (PDF)</h3>
+                <button class="modal-close-btn" id="btnClosePdfModal">&times;</button>
+            </div>
+            <form id="pdfForm">
+                <div class="form-field">
+                    <label>Patient Specimen ID</label>
+                    <input type="text" id="pdfPatientId" value="SPECIMEN-2026-X01" required>
+                </div>
+                <div class="form-field">
+                    <label>Patient Name / Alias</label>
+                    <input type="text" id="pdfPatientName" value="Anonymous Specimen" required>
+                </div>
+                <div class="form-field">
+                    <label>Pathologist / Reviewing Physician</label>
+                    <input type="text" id="pdfPhysician" value="Dr. H. Sharma, MD (Hematopathology)">
+                </div>
+                <div class="form-field">
+                    <label>Clinical Notes</label>
+                    <textarea id="pdfNotes" rows="2">Peripheral blood smear evaluated under 100x oil immersion. Correlate with CBC and flow cytometry.</textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary btn-sm" id="btnCancelPdf">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm" id="btnDownloadPdf">
+                        Download PDF Report
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/js/analyzer.js"></script>
+</body>
+</html>

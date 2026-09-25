@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Knowledge Center & Animated Oncology Blog — HemaVision™</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Professional Clinical Navbar -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">
+            <div class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                </svg>
+            </div>
+            <div>
+                <span class="brand-title">HemaVision™ <span class="badge-clinical">CLINICAL CORE</span></span>
+                <span class="brand-subtitle">Precision Hematology & Cytopathology Intelligence</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-link">About Leukemia</a>
+            <a href="/analyzer" class="nav-link">Diagnostic Lab</a>
+            <a href="/cancer-guide" class="nav-link active">Cancer Video Blog</a>
+            <a href="/treatment" class="nav-link">Treatment Protocols</a>
+            <a href="/copilot" class="nav-link">Clinical Copilot</a>
+        </nav>
+
+        <div class="nav-cta">
+            <a href="/analyzer" class="btn btn-primary btn-sm">
+                Launch Diagnostic Lab
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Guide Hero Banner -->
+        <section class="guide-hero">
+            <span class="section-badge" style="background: rgba(94, 234, 212, 0.15); color: #5eead4; border-color: rgba(94, 234, 212, 0.3);">HEMATOLOGIC ONCOLOGY REPOSITORIUM</span>
+            <h1>Types of Leukemia & Cellular Oncology: The Comprehensive Medical Guide</h1>
+            <p>
+                An in-depth, peer-reviewed clinical knowledge base explaining how malignant mutations disrupt normal hematopoiesis, 
+                differentiating the 4 major leukemias (ALL, AML, CLL, CML), and visualizing cellular mechanisms through medical animations.
+            </p>
+            <div class="guide-stats-strip">
+                <div class="guide-stat-item">
+                    <strong>4 Major Subtypes</strong>
+                    <span>ALL · AML · CLL · CML</span>
+                </div>
+                <div class="guide-stat-item">
+                    <strong>3 Clinical Animations</strong>
+                    <span>Pathogenesis · Immunity · Cytotoxicity</span>
+                </div>
+                <div class="guide-stat-item">
+                    <strong>>90% Remission</strong>
+                    <span>Modern Pediatric ALL Induction</span>
+                </div>
+                <div class="guide-stat-item">
+                    <strong>WHO 2026</strong>
+                    <span>Diagnostic Cytopathology Standards</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Animations Section -->
+        <section class="video-showcase-section">
+            <div class="section-heading-wrap">
+                <span class="section-badge">CELLULAR LEVEL ANIMATIONS</span>
+                <h2>Medical Animations of Cancer Mechanics</h2>
+                <p class="section-sub">Watch high-definition animations illustrating oncogenic DNA damage, immune evasion, and chemotherapeutic cell death.</p>
+            </div>
+
+            <div class="video-grid">
+                <!-- Video 1: Cancer Pathogenesis -->
+                <div class="video-card">
+                    <div class="video-media-wrap">
+                        <video controls preload="metadata" poster="/static/samples/normal/normal_01.jpg">
+                            <source src="/static/videos/cancer_pathogenesis.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-badge-overlay">Pathogenesis Animation</span>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>1. How Cancer Starts: Clonal Mutation</h3>
+                        <p>
+                            Shows the fundamental cellular transition where normal regulatory checkpoints fail. DNA mutations cause 
+                            blasts to bypass programmed apoptosis, resulting in exponential, uncontrolled replication inside bone marrow niches.
+                        </p>
+                        <div class="video-card-footer">
+                            <span class="video-duration">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Educational Medical Video
+                            </span>
+                            <a href="/static/videos/cancer_pathogenesis.webm" download class="btn btn-outline btn-sm">Download Clip</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2: Immune Surveillance -->
+                <div class="video-card">
+                    <div class="video-media-wrap">
+                        <video controls preload="metadata" poster="/static/samples/normal/normal_02.jpg">
+                            <source src="/static/videos/immune_defense.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-badge-overlay">Immunology Animation</span>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>2. Host Immune Response & Surveillance</h3>
+                        <p>
+                            Demonstrates how cytotoxic T-lymphocytes patrol the vascular endothelium looking for aberrant antigens, 
+                            and how modern immunotherapies (such as CAR-T and bispecific antibodies) retrain the immune system.
+                        </p>
+                        <div class="video-card-footer">
+                            <span class="video-duration">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Educational Medical Video
+                            </span>
+                            <a href="/static/videos/immune_defense.webm" download class="btn btn-outline btn-sm">Download Clip</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3: Chemotherapy Cytotoxicity -->
+                <div class="video-card">
+                    <div class="video-media-wrap">
+                        <video controls preload="metadata" poster="/static/samples/all_blast/all_01.jpg">
+                            <source src="/static/videos/chemotherapy_action.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="video-badge-overlay">Therapeutics Animation</span>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>3. Cytotoxic Chemotherapy at Cellular Scale</h3>
+                        <p>
+                            Visualizes how systemic antimetabolites, microtubule disruptors, and alkylating agents arrest the mitotic 
+                            spindle during metaphase, driving rapidly dividing leukemic cells into apoptotic destruction.
+                        </p>
+                        <div class="video-card-footer">
+                            <span class="video-duration">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Educational Medical Video
+                            </span>
+                            <a href="/static/videos/chemotherapy_action.webm" download class="btn btn-outline btn-sm">Download Clip</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subtype Navigation Tabs -->
+        <div class="guide-tabs-bar">
+            <button class="guide-tab-btn active" onclick="switchGuideTab('all')">Acute Lymphoblastic Leukemia (ALL)</button>
+            <button class="guide-tab-btn" onclick="switchGuideTab('aml')">Acute Myeloid Leukemia (AML)</button>
+            <button class="guide-tab-btn" onclick="switchGuideTab('cll')">Chronic Lymphocytic Leukemia (CLL)</button>
+            <button class="guide-tab-btn" onclick="switchGuideTab('cml')">Chronic Myeloid Leukemia (CML)</button>
+            <button class="guide-tab-btn" onclick="switchGuideTab('comparison')">Comparative Classification Matrix</button>
+        </div>
+
+        <!-- 1. ALL Deep Dive Article -->
+        <article class="article-container guide-tab-content" id="tab-all">
+            <div class="article-header">
+                <span class="badge-all">LYMPHOID STEM CELL MALIGNANCY</span>
+                <h2>Acute Lymphoblastic Leukemia (ALL): Biology, Cytopathology & Therapy</h2>
+                <div class="article-meta">
+                    <span><strong>WHO Category:</strong> Precursor B/T Neoplasm</span>
+                    <span>·</span>
+                    <span><strong>Hallmark Biomarker:</strong> High N:C Ratio (>0.70)</span>
+                    <span>·</span>
+                    <span><strong>Pediatric Peak:</strong> Ages 2–5</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h3>1. Pathophysiology and Clonal Proliferation</h3>
+                <p>
+                    Acute Lymphoblastic Leukemia (ALL) arises from the malignant transformation of hematopoietic progenitor cells committed 
+                    to the B-cell (~85%) or T-cell (~15%) lineage. Genetic translocations—such as <em>t(12;21)(p13;q22) [ETV6-RUNX1]</em> or 
+                    <em>t(9;22)(q34;q11.2) [BCR-ABL1]</em>—freeze the differentiating cell in an immature "blast" stage.
+                </p>
+                <p>
+                    These malignant lymphoblasts lose the capacity for terminal differentiation into functional immunoglobulins or helper T-cells. 
+                    Instead, they rapidly proliferate within the marrow cavities of long bones, sternum, and pelvis, progressively extinguishing normal 
+                    erythropoiesis (leading to profound anemia), megakaryocytopoiesis (causing bleeding and petechiae), and mature granulopoiesis (inducing 
+                    neutropenic fevers).
+                </p>
+
+                <div class="clinical-callout">
+                    <strong>Diagnostic Smear Microscopy Criterion:</strong>
+                    <p>
+                        Under oil immersion microscopy (100x), lymphoblasts typically exhibit a diameter of 10–20 µm with an abnormally high 
+                        <strong>Nucleus-to-Cytoplasmic (N:C) ratio exceeding 0.70 to 0.95</strong>, homogenous chromatin, and minimal surrounding 
+                        basophilic cytoplasm.
+                    </p>
+                </div>
+
+                <h3>2. Clinical Presentation & B-Symptoms</h3>
+                <p>
+                    Patients present with acute onset of symptoms over days to weeks. The classic triad includes:
+                </p>
+                <ul>
+                    <li><strong>Bone Pain & Arthralgias:</strong> Caused by high intra-medullary pressure from expanding blast cell masses.</li>
+                    <li><strong>Cytopenias:</strong> Severe fatigue, pallor, mucosal bleeding, epistaxis, and unprovoked ecchymosis.</li>
+                    <li><strong>Extramedullary Infiltration:</strong> Hepatosplenomegaly, generalized non-tender lymphadenopathy, and central nervous system (CNS) meningeal infiltration.</li>
+                </ul>
+
+                <h3>3. Curative Multi-Phase Treatment Protocols</h3>
+                <p>
+                    Modern pediatric ALL cure rates exceed 90%, while adult protocols achieve 40–50% long-term disease-free survival. Treatment is administered over 2 to 3 years across four distinct phases:
+                </p>
+                <ol>
+                    <li><strong>Remission Induction (Weeks 1–4):</strong> Systemic eradication of >99% of blasts using Vincristine, Dexamethasone, PEG-Asparaginase, and Daunorubicin.</li>
+                    <li><strong>Consolidation & CNS Prophylaxis (Months 2–8):</strong> High-dose systemic Methotrexate and intrathecal chemotherapy to eliminate sanctuary site sanctuary clones.</li>
+                    <li><strong>Delayed Intensification:</strong> Re-induction therapy to eradicate minimal residual disease (MRD).</li>
+                    <li><strong>Targeted & Living Drugs (CAR-T):</strong> Tisagenlecleucel (Kymriah) targeting the CD19 glycoprotein for refractory/relapsed B-ALL.</li>
+                </ol>
+            </div>
+        </article>
+
+        <!-- 2. AML Deep Dive Article -->
+        <article class="article-container guide-tab-content" id="tab-aml" style="display: none;">
+            <div class="article-header">
+                <span class="badge-aml">MYELOID STEM CELL MALIGNANCY</span>
+                <h2>Acute Myeloid Leukemia (AML): Auer Rods, Cytogenetics & Induction</h2>
+                <div class="article-meta">
+                    <span><strong>WHO Category:</strong> Myeloid Neoplasm</span>
+                    <span>·</span>
+                    <span><strong>Hallmark Biomarker:</strong> Auer Rods & MPO Positivity</span>
+                    <span>·</span>
+                    <span><strong>Median Age:</strong> 68 Years</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h3>1. Biological Origins</h3>
+                <p>
+                    Acute Myeloid Leukemia (AML) is characterized by clonal expansion of myeloid blasts in the bone marrow and peripheral blood. 
+                    According to the World Health Organization (WHO), the diagnosis of AML requires the presence of <strong>≥20% myeloblasts</strong> 
+                    in the bone marrow or blood, except in the presence of recurring genetic abnormalities like <em>t(8;21)</em> or <em>inv(16)</em>.
+                </p>
+
+                <div class="clinical-callout">
+                    <strong>Pathognomonic Microscopic Sign: Auer Rods</strong>
+                    <p>
+                        Auer rods are needle-shaped azurophilic cytoplasmic inclusions composed of fused lysosomal granules. They contain high concentrations 
+                        of myeloperoxidase (MPO) and definitively confirm myeloid lineage, ruling out lymphoblastic leukemia.
+                    </p>
+                </div>
+
+                <h3>2. Cytogenetic Risk Stratification</h3>
+                <p>
+                    AML prognosis is strictly dictated by molecular genetics:
+                </p>
+                <ul>
+                    <li><strong>Favorable Risk:</strong> Core-binding factor leukemias [t(8;21), inv(16)], isolated mutated <em>NPM1</em> without <em>FLT3-ITD</em>.</li>
+                    <li><strong>Intermediate Risk:</strong> Normal karyotype AML, mutated <em>CEBPA</em>.</li>
+                    <li><strong>Adverse Risk:</strong> Complex karyotype (≥3 abnormalities), <em>TP53</em> mutations, internal tandem duplication in <em>FLT3 (FLT3-ITD)</em> with high allelic ratio.</li>
+                </ul>
+
+                <h3>3. Standard Intensive Induction ("7+3")</h3>
+                <p>
+                    The cornerstone of AML induction chemotherapy remains the "7+3" regimen:
+                </p>
+                <ul>
+                    <li><strong>Cytarabine (Ara-C):</strong> Continuous intravenous infusion for 7 consecutive days (100–200 mg/m²/day).</li>
+                    <li><strong>Daunorubicin or Idarubicin:</strong> Rapid IV push on Days 1, 2, and 3.</li>
+                    <li><strong>Targeted Adjuncts:</strong> Midostaurin (for <em>FLT3</em>-mutated AML) or Gemtuzumab ozogamicin (anti-CD33 antibody-drug conjugate).</li>
+                    <li><strong>Allogeneic Stem Cell Transplant (allo-HSCT):</strong> The gold-standard consolidative curative strategy for intermediate and adverse-risk patients.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 3. CLL Deep Dive Article -->
+        <article class="article-container guide-tab-content" id="tab-cll" style="display: none;">
+            <div class="article-header">
+                <span class="badge-cll">INDOLENT MATURE B-CELL LYMPHOCYTOSIS</span>
+                <h2>Chronic Lymphocytic Leukemia (CLL): Smudge Cells & Modern BTK Inhibitors</h2>
+                <div class="article-meta">
+                    <span><strong>WHO Category:</strong> Mature B-Cell Malignancy</span>
+                    <span>·</span>
+                    <span><strong>Hallmark Biomarker:</strong> Gumprecht Smudge Cells</span>
+                    <span>·</span>
+                    <span><strong>Immunophenotype:</strong> CD5+, CD19+, CD23+</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h3>1. Indolent Natural History</h3>
+                <p>
+                    Chronic Lymphocytic Leukemia (CLL) is the most common leukemia in Western adults. It is characterized by progressive accumulation 
+                    of morphologically mature but immunologically dysfunctional B-lymphocytes. Unlike acute leukemias where cells are completely arrested 
+                    as primitive blasts, CLL cells resemble small normal lymphocytes but possess defects in apoptosis (often mediated by high <em>BCL-2</em> expression).
+                </p>
+
+                <div class="clinical-callout">
+                    <strong>Microscopic Hallmark: Gumprecht Smudge Cells</strong>
+                    <p>
+                        During the preparation of peripheral blood smears, the fragile CLL lymphocytes rupture under shear mechanical stress, 
+                        leaving dispersed nuclear chromatin known as "basket cells" or "smudge cells."
+                    </p>
+                </div>
+
+                <h3>2. Clinical Staging: Rai and Binet Systems</h3>
+                <p>
+                    Because many patients are asymptomatic at initial diagnosis, staging guides therapeutic intervention:
+                </p>
+                <ul>
+                    <li><strong>Rai Stage 0 / Binet A:</strong> Isolated absolute lymphocytosis (>5,000/µL monoclonal B-cells). Managed with active surveillance ("watch-and-wait").</li>
+                    <li><strong>Rai Stage I–II / Binet B:</strong> Lymphadenopathy, hepatosplenomegaly.</li>
+                    <li><strong>Rai Stage III–IV / Binet C:</strong> Bone marrow failure resulting in anemia (Hb < 11 g/dL) or thrombocytopenia (platelets < 100,000/µL). Requires immediate systemic therapy.</li>
+                </ul>
+
+                <h3>3. Targeted Precision Medicine: The Chemotherapy-Free Era</h3>
+                <p>
+                    In modern oncology, traditional chemo-immunotherapy (FCR: Fludarabine, Cyclophosphamide, Rituximab) has been largely replaced by oral targeted inhibitors:
+                </p>
+                <ul>
+                    <li><strong>Bruton's Tyrosine Kinase (BTK) Inhibitors:</strong> Ibrutinib, Acalabrutinib, and Zanubrutinib shut down essential B-cell receptor survival signaling.</li>
+                    <li><strong>BCL-2 Antagonist:</strong> Venetoclax (Venclexta) restores the natural apoptotic machinery by displacing pro-apoptotic proteins.</li>
+                    <li><strong>Anti-CD20 Monoclonal Antibodies:</strong> Obinutuzumab and Rituximab for immune-mediated antibody-dependent cytotoxicity.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 4. CML Deep Dive Article -->
+        <article class="article-container guide-tab-content" id="tab-cml" style="display: none;">
+            <div class="article-header">
+                <span class="badge-cml">MYELOPROLIFERATIVE NEOPLASM</span>
+                <h2>Chronic Myeloid Leukemia (CML): Philadelphia Chromosome & Tyrosine Kinase Inhibitors</h2>
+                <div class="article-meta">
+                    <span><strong>Genetic Driver:</strong> BCR-ABL1 Fusion t(9;22)</span>
+                    <span>·</span>
+                    <span><strong>Hallmark Finding:</strong> Massive Granulocytic Leukocytosis</span>
+                    <span>·</span>
+                    <span><strong>Target Drug:</strong> Imatinib (Gleevec)</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h3>1. The Molecular Revolution: Philadelphia Chromosome</h3>
+                <p>
+                    Chronic Myeloid Leukemia is defined by a reciprocal translocation between chromosomes 9 and 22: 
+                    <strong>t(9;22)(q34.1;q11.2)</strong>. This translocation fuses the <em>BCR</em> gene on chromosome 22 to the <em>ABL1</em> 
+                    proto-oncogene on chromosome 9, resulting in the abnormal, shortened "Philadelphia Chromosome."
+                </p>
+                <p>
+                    The resulting chimeric fusion protein, <strong>p210 BCR-ABL1</strong>, is a constitutively active tyrosine kinase. It relentlessly 
+                    phosphorylates downstream substrates, driving continuous granulocyte proliferation and preventing normal programmed cell death.
+                </p>
+
+                <div class="clinical-callout">
+                    <strong>The 3 Triphasic Clinical Stages of CML:</strong>
+                    <p>
+                        <strong>1. Chronic Phase (85% of presentations):</strong> Blasts < 10% in blood/marrow. Patients often present with fatigue and splenomegaly.<br/>
+                        <strong>2. Accelerated Phase:</strong> Blasts 10–19%, persistent thrombocytosis or thrombocytopenia.<br/>
+                        <strong>3. Blast Crisis (Terminal transformation):</strong> Blasts ≥ 20% in blood/marrow; transforms clinically into aggressive acute leukemia.
+                    </p>
+                </div>
+
+                <h3>2. Targeted Tyrosine Kinase Inhibitor (TKI) Therapy</h3>
+                <p>
+                    The discovery of <strong>Imatinib (Gleevec)</strong> by Dr. Brian Druker in 2001 transformed CML from a fatal malignancy into a manageable 
+                    chronic condition with normal life expectancy:
+                </p>
+                <ul>
+                    <li><strong>First-Generation TKI:</strong> Imatinib selectively binds the ATP-binding pocket of BCR-ABL1, inactivating its enzymatic function.</li>
+                    <li><strong>Second-Generation TKIs:</strong> Dasatinib, Nilotinib, Bosutinib provide deeper molecular responses and overcome common point mutations.</li>
+                    <li><strong>Third-Generation TKI:</strong> Ponatinib is uniquely capable of overcoming the recalcitrant <em>T315I</em> "gatekeeper" mutation.</li>
+                    <li><strong>Molecular Response Monitoring:</strong> Patients undergo regular blood RT-qPCR testing aiming for Major Molecular Response (MMR: BCR-ABL1 transcripts ≤ 0.1% on the International Scale).</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 5. Comparative Classification Matrix -->
+        <article class="article-container guide-tab-content" id="tab-comparison" style="display: none;">
+            <div class="article-header">
+                <span class="section-badge">SYNTHESIS & COMPARATIVE ONCOLOGY</span>
+                <h2>Comprehensive Cytopathological Comparison Matrix</h2>
+                <p class="section-sub">A side-by-side diagnostic reference comparing cellular origin, morphology, genetics, and first-line treatment regimens.</p>
+            </div>
+
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Leukemia Type</th>
+                            <th>Cell Lineage</th>
+                            <th>Typical Onset & Age</th>
+                            <th>Peripheral Smear Morphology</th>
+                            <th>Key Genetic Hallmark</th>
+                            <th>Frontline Therapy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge-all">ALL</span><br/><strong>Acute Lymphoblastic</strong></td>
+                            <td>Immature B-cell (85%) or T-cell (15%) progenitors</td>
+                            <td>Acute (days to weeks)<br/>Peak: 2–5 years & >50 years</td>
+                            <td>High N:C ratio (>0.70), fine chromatin, scanty cytoplasm, inconspicuous nucleoli</td>
+                            <td>t(12;21) ETV6-RUNX1<br/>t(9;22) BCR-ABL1</td>
+                            <td>Multi-agent induction (Vincristine + Steroids + PEG-Asparaginase), CAR-T</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-aml">AML</span><br/><strong>Acute Myeloid</strong></td>
+                            <td>Immature myeloid blast precursors (granulocytic/monocytic)</td>
+                            <td>Rapid, aggressive<br/>Median age: 68 years</td>
+                            <td>Abundant cytoplasm, Auer rods (pathognomonic), prominent nucleoli</td>
+                            <td>FLT3-ITD, NPM1,<br/>t(8;21), inv(16)</td>
+                            <td>"7+3" Cytarabine + Daunorubicin, Venetoclax, Stem Cell Transplant</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-cll">CLL</span><br/><strong>Chronic Lymphocytic</strong></td>
+                            <td>Mature-appearing monoclonal CD5+ B-lymphocytes</td>
+                            <td>Indolent (months to years)<br/>Median age: 72 years</td>
+                            <td>Small mature lymphocytes, soccer-ball clumped chromatin, <strong>smudge cells</strong></td>
+                            <td>del(17p) [TP53],<br/>del(11q), del(13q)</td>
+                            <td>Watch-and-wait (early), BTK inhibitors (Ibrutinib, Acalabrutinib), Venetoclax</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge-cml">CML</span><br/><strong>Chronic Myeloid</strong></td>
+                            <td>Pluripotent myeloid progenitor cell</td>
+                            <td>Triphasic (Chronic -> Accelerated -> Blast)<br/>Median age: 64 years</td>
+                            <td>Full spectrum of myeloid maturation (myelocytes, metamyelocytes, bands), basophilia</td>
+                            <td><strong>t(9;22) Philadelphia Chromosome</strong> (BCR-ABL1)</td>
+                            <td>Oral Tyrosine Kinase Inhibitors (Imatinib, Dasatinib, Nilotinib)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 12px;">
+                <a href="/analyzer" class="btn btn-primary">Test Specimen on Diagnostic Lab</a>
+                <a href="/treatment" class="btn btn-outline">Explore CAR-T Interactive Simulation</a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 60px; padding: 36px 0; border-top: 1px solid var(--border-color); background: #ffffff; text-align: center;">
+        <div class="container">
+            <p style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">HemaVision™ Precision Oncology Intelligence Platform</p>
+            <p style="font-size: 0.78rem; color: var(--text-muted); max-width: 640px; margin: 0 auto 14px auto;">
+                Educational Decision-Support System for Cytopathology & Hematology Research. Built in conformance with WHO Hematolymphoid Neoplasm Guidelines.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 18px; font-size: 0.82rem;">
+                <a href="/" style="color: var(--accent-teal); text-decoration: none;">About Leukemia</a>
+                <a href="/analyzer" style="color: var(--accent-teal); text-decoration: none;">Diagnostic Lab</a>
+                <a href="/cancer-guide" style="color: var(--accent-teal); text-decoration: none;">Cancer Knowledge Base</a>
+                <a href="/treatment" style="color: var(--accent-teal); text-decoration: none;">Treatment Protocols</a>
+                <a href="/copilot" style="color: var(--accent-teal); text-decoration: none;">Clinical Copilot</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Tabs Script -->
+    <script>
+        function switchGuideTab(tabKey) {
+            // Update Tab Buttons
+            document.querySelectorAll('.guide-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update Tab Content
+            document.querySelectorAll('.guide-tab-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            const activeSection = document.getElementById('tab-' + tabKey);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+                activeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+</body>
+</html>

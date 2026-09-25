@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Protocols & Cellular Animations — HemaVision™</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Professional Clinical Navbar -->
+    <header class="navbar">
+        <a href="/" class="nav-brand">
+            <div class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                </svg>
+            </div>
+            <div>
+                <span class="brand-title">HemaVision™ <span class="badge-clinical">CLINICAL CORE</span></span>
+                <span class="brand-subtitle">Precision Hematology & Cytopathology Intelligence</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-link">About Leukemia</a>
+            <a href="/analyzer" class="nav-link">Diagnostic Lab</a>
+            <a href="/cancer-guide" class="nav-link">Cancer Video Blog</a>
+            <a href="/treatment" class="nav-link active">Treatment Protocols</a>
+            <a href="/copilot" class="nav-link">Clinical Copilot</a>
+        </nav>
+
+        <div class="nav-cta">
+            <a href="/analyzer" class="btn btn-primary btn-sm">
+                Launch Lab
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <div class="section-heading-wrap">
+            <span class="section-badge">INTERACTIVE ONCOLOGY</span>
+            <h2>Leukemia Treatment Mechanisms & Cellular Animations</h2>
+            <p class="section-sub">Explore evidence-based therapies designed to eradicate malignant clones and restore healthy bone marrow hematopoiesis.</p>
+        </div>
+
+        <!-- Treatment Sub-Navigation Pills -->
+        <div class="treatment-nav-bar">
+            <button class="t-nav-btn active" data-treat="cart">1. CAR-T Cell Immunotherapy (Live Simulation)</button>
+            <button class="t-nav-btn" data-treat="chemo">2. Phased Chemotherapy Protocols</button>
+            <button class="t-nav-btn" data-treat="hsct">3. Stem Cell Transplantation (HSCT)</button>
+            <button class="t-nav-btn" data-treat="targeted">4. Targeted Molecular Inhibitors (TKI)</button>
+        </div>
+
+        <!-- 1. CAR-T Simulation View -->
+        <div class="treat-section active" id="view-cart">
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-badge">CELLULAR MICRO-ENVIRONMENT SIMULATION</span>
+                        <h3>Chimeric Antigen Receptor (CAR-T) Cell CD19 Docking & Lysis</h3>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn btn-outline btn-sm" id="btnResetCart">Reset Simulation</button>
+                        <button class="btn btn-primary btn-sm" id="btnToggleCart">Pause Simulation</button>
+                    </div>
+                </div>
+
+                <div class="sim-container-layout">
+                    <!-- HTML5 Simulation Canvas -->
+                    <div class="canvas-viewport">
+                        <canvas id="cartCanvas" width="720" height="380"></canvas>
+                        <div class="canvas-legend">
+                            <span class="legend-dot"><span class="c-dot blast"></span> Malignant ALL Blast (CD19+)</span>
+                            <span class="legend-dot"><span class="c-dot cart"></span> Reprogrammed CAR-T Cell</span>
+                            <span class="legend-dot"><span class="c-dot dead"></span> Lysed / Apoptotic Cell</span>
+                        </div>
+                    </div>
+
+                    <!-- Step-by-Step Mechanism Breakdown -->
+                    <div class="sim-text-flow">
+                        <h4>Cellular Mechanism of Action</h4>
+                        
+                        <div class="sim-step-item">
+                            <span class="sim-step-badge">1</span>
+                            <div>
+                                <strong>T-Cell Leukapheresis</strong>
+                                <p>Native cytotoxic T-lymphocytes are harvested from the patient's peripheral blood via apheresis.</p>
+                            </div>
+                        </div>
+
+                        <div class="sim-step-item">
+                            <span class="sim-step-badge">2</span>
+                            <div>
+                                <strong>Lentiviral CAR Engineering</strong>
+                                <p>A disarmed viral vector introduces a synthetic Chimeric Antigen Receptor engineered to bind surface <b>CD19 antigens</b> unique to B-precursor blasts.</p>
+                            </div>
+                        </div>
+
+                        <div class="sim-step-item">
+                            <span class="sim-step-badge">3</span>
+                            <div>
+                                <strong>Perforin/Granzyme Cytolysis</strong>
+                                <p>Upon receptor docking, the CAR-T cell forms an immunological synapse and discharges perforin and granzyme, inducing apoptotic cell death.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                            <div style="flex:1;">
+                                <small style="color: var(--text-muted); display: block;">FDA Indications</small>
+                                <strong style="color: var(--accent-teal); font-size: 0.9rem;">Relapsed/Refractory B-ALL</strong>
+                            </div>
+                            <div style="flex:1;">
+                                <small style="color: var(--text-muted); display: block;">Complete Remission</small>
+                                <strong style="color: var(--accent-teal); font-size: 0.9rem;">70% – 85% Cohort Response</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Chemotherapy Protocol View -->
+        <div class="treat-section" id="view-chemo" style="display: none;">
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-badge">ONCOLOGY STANDARD OF CARE</span>
+                        <h3>Multi-Agent Phased Chemotherapy Protocols</h3>
+                    </div>
+                    <span class="badge-clinical">First-Line Remission Therapy</span>
+                </div>
+
+                <div class="chemo-cards-grid">
+                    <div class="chemo-card">
+                        <div class="chemo-header">
+                            <span class="c-badge">PHASE 1</span>
+                            <h4>Remission Induction</h4>
+                            <span class="chemo-duration">Duration: 4 to 6 Weeks</span>
+                        </div>
+                        <p class="chemo-goal"><b>Primary Objective:</b> Rapidly clear the blood and marrow of identifiable leukemic blasts to reach Complete Remission (&lt; 5% marrow blasts).</p>
+                        <ul class="chemo-drugs-list">
+                            <li>Vincristine (mitotic spindle arrest)</li>
+                            <li>Dexamethasone or Prednisone (lymphoblast cytolysis)</li>
+                            <li>PEG-L-asparaginase (asparagine amino acid depletion)</li>
+                            <li>Daunorubicin / Doxorubicin (anthracycline DNA intercalation)</li>
+                        </ul>
+                    </div>
+
+                    <div class="chemo-card">
+                        <div class="chemo-header">
+                            <span class="c-badge">PHASE 2</span>
+                            <h4>Consolidation / Intensification</h4>
+                            <span class="chemo-duration">Duration: 4 to 6 Months</span>
+                        </div>
+                        <p class="chemo-goal"><b>Primary Objective:</b> Eliminate residual sub-microscopic clones (Measurable Residual Disease, MRD) to prevent early relapse.</p>
+                        <ul class="chemo-drugs-list">
+                            <li>High-Dose Methotrexate with Leucovorin rescue</li>
+                            <li>Cytarabine (Ara-C DNA synthesis inhibitor)</li>
+                            <li>6-Mercaptopurine (6-MP antimetabolite)</li>
+                        </ul>
+                    </div>
+
+                    <div class="chemo-card">
+                        <div class="chemo-header">
+                            <span class="c-badge">PHASE 3</span>
+                            <h4>CNS Prophylaxis</h4>
+                            <span class="chemo-duration">Concurrent Across Treatment</span>
+                        </div>
+                        <p class="chemo-goal"><b>Primary Objective:</b> Protect the central nervous system sanctuary behind the blood-brain barrier from leukemic seeding.</p>
+                        <ul class="chemo-drugs-list">
+                            <li>Intrathecal Methotrexate via lumbar puncture</li>
+                            <li>Intrathecal Hydrocortisone and Cytarabine</li>
+                        </ul>
+                    </div>
+
+                    <div class="chemo-card">
+                        <div class="chemo-header">
+                            <span class="c-badge">PHASE 4</span>
+                            <h4>Maintenance Therapy</h4>
+                            <span class="chemo-duration">Duration: 2 to 3 Years</span>
+                        </div>
+                        <p class="chemo-goal"><b>Primary Objective:</b> Continuous low-dose oral suppression preventing late recurrence while enabling resumption of school or work.</p>
+                        <ul class="chemo-drugs-list">
+                            <li>Daily oral 6-Mercaptopurine</li>
+                            <li>Weekly oral Methotrexate</li>
+                            <li>Periodic pulses of Vincristine & Corticosteroids</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Stem Cell Transplant View -->
+        <div class="treat-section" id="view-hsct" style="display: none;">
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-badge">CURATIVE CELL THERAPY</span>
+                        <h3>Allogeneic Hematopoietic Stem Cell Transplantation (HSCT)</h3>
+                    </div>
+                    <span class="badge-clinical" style="background:#fee2e2; color:#b91c1c; border-color:#fecaca;">High-Risk & Relapsed Cases</span>
+                </div>
+
+                <div class="hsct-workflow">
+                    <div class="hsct-card">
+                        <div class="hsct-icon">🧪</div>
+                        <h4>1. Conditioning</h4>
+                        <p>High-dose myeloablative chemotherapy and total body irradiation destroys the diseased leukemic bone marrow and suppresses host immunity.</p>
+                    </div>
+
+                    <div class="hsct-card">
+                        <div class="hsct-icon">🩸</div>
+                        <h4>2. Stem Cell Infusion</h4>
+                        <p>HLA-matched healthy donor CD34+ hematopoietic stem cells are infused intravenously through a central venous catheter.</p>
+                    </div>
+
+                    <div class="hsct-card">
+                        <div class="hsct-icon">🦴</div>
+                        <h4>3. Marrow Engraftment</h4>
+                        <p>Donor stem cells home to bone marrow cavities, begin proliferating, and reconstitute healthy red cells, white cells, and platelets within 2–3 weeks.</p>
+                    </div>
+
+                    <div class="hsct-card">
+                        <div class="hsct-icon">🛡️</div>
+                        <h4>4. Graft-vs-Leukemia</h4>
+                        <p>Donor T-lymphocytes actively identify and eradicate residual host malignant clones, providing lifelong immunological surveillance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Targeted Molecular Inhibitors View -->
+        <div class="treat-section" id="view-targeted" style="display: none;">
+            <div class="clinical-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-badge">PRECISION MEDICINE</span>
+                        <h3>Targeted Tyrosine Kinase Inhibitors (TKI)</h3>
+                    </div>
+                    <span class="badge-clinical">Philadelphia Chromosome Positive (Ph+) ALL</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div class="clinical-card" style="background: var(--bg-main);">
+                        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 8px;">The BCR-ABL1 Fusion Oncogene</h4>
+                        <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+                            A reciprocal chromosomal translocation $t(9;22)(q34;q11)$ produces the <b>Philadelphia chromosome</b>, generating a constitutively active tyrosine kinase that blocks apoptosis and drives malignant proliferation.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 6px;">
+                            <div style="font-size: 0.8rem; background: #ffffff; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border-color);">
+                                <b>First Generation:</b> Imatinib (Gleevec)
+                            </div>
+                            <div style="font-size: 0.8rem; background: #ffffff; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border-color);">
+                                <b>Second Generation:</b> Dasatinib, Nilotinib
+                            </div>
+                            <div style="font-size: 0.8rem; background: #ffffff; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border-color);">
+                                <b>Third Generation:</b> Ponatinib (overcomes T315I gatekeeper mutation)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clinical-card" style="background: var(--bg-main);">
+                        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 8px;">Mechanism of Action</h4>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6;">
+                            <li style="padding-left: 16px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-teal); font-weight: bold;">•</span>
+                                <b>Competitive ATP Binding:</b> The inhibitor binds specifically into the ATP-binding cleft of the BCR-ABL1 kinase domain.
+                            </li>
+                            <li style="padding-left: 16px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-teal); font-weight: bold;">•</span>
+                                <b>Signal Shutdown:</b> Inhibits tyrosine phosphorylation of downstream survival pathways (JAK/STAT, PI3K/AKT, and RAS/MAPK).
+                            </li>
+                            <li style="padding-left: 16px; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-teal); font-weight: bold;">•</span>
+                                <b>Apoptosis Re-activation:</b> Allows malignant lymphoblasts to undergo normal programmed cell death while sparing healthy tissues.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Global Medical Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>HemaVision™ Clinical Oncology Intelligence</strong>
+                <p style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">
+                    Dedicated to automated cytopathology research and decision support.
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="/" class="footer-link">Home</a>
+                <a href="/analyzer" class="footer-link">Diagnostic Lab</a>
+                <a href="/treatment" class="footer-link">Treatment Protocols</a>
+                <a href="/copilot" class="footer-link">Gemini Copilot</a>
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            <b>CLINICAL DISCLAIMER:</b> Treatment regimens described herein represent standard of care oncology guidelines and are presented for educational and reference purposes. Specific treatment selections must always be formulated by a board-certified hematologist-oncologist tailored to patient cytogenetics and comorbidities.
+        </div>
+    </footer>
+
+    <script src="/static/js/treatment.js"></script>
+</body>
+</html>
